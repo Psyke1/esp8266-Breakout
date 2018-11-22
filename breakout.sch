@@ -3525,6 +3525,7 @@ type 0309, grid 2.5 mm</description>
 <part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X8" device="" package3d_urn="urn:adsk.eagle:package:22409/2"/>
 <part name="R1" library="resistor" deviceset="R-US_" device="R0805"/>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0805"/>
+<part name="R3" library="resistor" deviceset="R-US_" device="R0805"/>
 </parts>
 <sheets>
 <sheet>
@@ -3550,6 +3551,10 @@ type 0309, grid 2.5 mm</description>
 <instance part="R2" gate="G$1" x="76.2" y="43.18">
 <attribute name="NAME" x="72.39" y="44.6786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="72.39" y="39.878" size="1.778" layer="96"/>
+</instance>
+<instance part="R3" gate="G$1" x="78.74" y="48.26">
+<attribute name="NAME" x="74.93" y="49.7586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="74.93" y="44.958" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -3632,13 +3637,6 @@ type 0309, grid 2.5 mm</description>
 <wire x1="86.36" y1="50.8" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$13" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="GPIO0"/>
-<pinref part="JP2" gate="A" pin="5"/>
-<wire x1="86.36" y1="48.26" x2="71.12" y2="48.26" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$14" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="GPIO2"/>
@@ -3678,6 +3676,20 @@ type 0309, grid 2.5 mm</description>
 <segment>
 <pinref part="U1" gate="G$1" pin="GPIO15"/>
 <pinref part="R2" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO0"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="73.66" y1="48.26" x2="71.12" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="JP2" gate="A" pin="5"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="83.82" y1="48.26" x2="86.36" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
